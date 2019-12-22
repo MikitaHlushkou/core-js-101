@@ -29,7 +29,7 @@
  *                                                    //  Ask her again.';
  */
 function willYouMarryMe(isPositiveAnswer) {
-  const f = async function () {
+  async function f() {
     const j = await isPositiveAnswer;
     if (j === true) {
       return 'Hooray!!! She said "Yes"!';
@@ -37,7 +37,7 @@ function willYouMarryMe(isPositiveAnswer) {
       return 'Oh no, she said "No".';
     }
     return Promise.reject(new Error('Wrong parameter is passed! Ask her again.'));
-  };
+  }
   return f();
 }
 
